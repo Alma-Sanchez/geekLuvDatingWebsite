@@ -4,16 +4,14 @@
     <?= getHead() ?>
     <body>
         <?= getHeader() ?>
-        <div id="viewMatchesDiv" method="get">
-            <form action="matches-submit.php">
+        <form action="matches-submit.php" method="get">
+            <fieldset>
+                <legend>Returning User</legend>
                 Full name:
-                <input type="text" name="name"><br>
+                <input type="text" name="name"><br><br>
                 <input type="submit" value="View Your Matches">
-            </form>
-        </div>
-        <div id="returningUserLabel">
-            Returning User
-        </div>
+            </fieldset>
+        </form>
         <?= getFooter() ?>
     </body>
 </html>
