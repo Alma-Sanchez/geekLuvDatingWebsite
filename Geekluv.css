@@ -85,15 +85,15 @@ fieldset {
 	background-color: #E0E0FF;
 	clear: left;
 }
-.match .welcomeButtons {
+.match{
 	padding-left: 160px;
 }
 
-.welcomeButtons ul{
+ul{
 	list-style-type: none;
 	padding-left: 0em;
 }
-.welcomeButtons li a img {
+li a img {
 	vertical-align: middle;
 }
 #w3c {
@@ -146,4 +146,13 @@ fieldset {
   background-image: -o-linear-gradient(top, #91cefa, #7c96eb);
   background-image: linear-gradient(to bottom, #91cefa, #7c96eb);
   text-decoration: none;
+}
+/*Footer stuff*/
+footer{
+	text-align: center;	
+	margin-top: 50px;
+	width: 100%;
+	border-top: 2px solid black;
+	font-size: 6pt;
+
 }
