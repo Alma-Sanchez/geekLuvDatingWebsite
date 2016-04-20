@@ -6,21 +6,13 @@
 	you are going to write, signup.php and matches.php.
 	You can modify this file as necessary to move redundant code out to common.php.
 	-->
-	
-	<head>
-		<title>GeekLuv</title>
-		
-		<meta charset="utf-8" />
-		
-		<!-- instructor-provided CSS and JavaScript links; do not modify -->
-		<link href="heart.gif" type="image/gif" rel="shortcut icon" />
-		<link href="Geekluv.css" type="text/css" rel="stylesheet" />
-	</head>
     
 <!--    Import statements for PHP   -->
     <?php
         include "common.php";
     ?>
+    
+    <?= getHead() ?>
 
 	<body>
 		<?= getHeader() ?>
