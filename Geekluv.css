@@ -1,0 +1,142 @@
+/*
+Homework 6: Geekluv
+You should link to this provided stylesheet from all of your pages.
+You should not need to modify this file. 
+Your pages should work with it as-is.
+*/
+
+* {
+	font-size: 12pt;
+	font-family: "Verdana", "Geneva", sans-serif;
+}
+
+a {
+	color: #F44;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #FFA;
+}
+
+a img {
+	border: none;
+}
+
+#bannerarea {
+	margin-bottom: 2em;
+}
+
+body {
+	background-color: white;
+	padding-left: 1em;
+}
+
+body > div, form {
+	overflow: hidden;
+	width: 35em;
+}
+
+div {
+	overflow: hidden;
+}
+
+fieldset {
+	background-color: #E0E0FF;
+	border: 2px outset gray;
+	border-radius: 10px;
+}
+/* the bold text labels to the left of each form field */
+fieldset strong,  /* For the sign-up page */
+ul strong { /* For the matches page */ 
+	float: left;
+	width: 11em;
+}
+h1 {
+	margin-top: 0em;
+}
+input[type="submit"] {
+	background-color: #FAA;
+	font-size: 120%;
+	font-weight: bold;
+}
+legend {
+	background-color: white;
+	border: 2px outset gray;
+	padding: 0.2em;
+}
+.match {
+	margin-bottom: 3em;
+	overflow: hidden;
+}
+.match img {
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+}
+.match p {
+	background-color: #E0E0FF;
+	clear: left;
+}
+.match .welcomeButtons {
+	padding-left: 160px;
+}
+
+.welcomeButtons ul{
+	list-style-type: none;
+	padding-left: 0em;
+}
+.welcomeButtons li a img {
+	vertical-align: middle;
+}
+#w3c {
+	clear: both;
+	margin-top: 2em;
+}
+.check-mates-btn, .sign-up-btn{
+	-webkit-border-radius: 10;
+  	-moz-border-radius: 10;
+  	border-radius: 10px;
+  	font-family: Arial;
+  	color: #ffffff;
+  	font-size: 20px;
+  	padding: 10px 20px 10px 20px;
+  	text-decoration: none;
+}
+.check-mates-btn {
+  background: #d934c3;
+  background-image: -webkit-linear-gradient(top, #d934c3, #b82b6d);
+  background-image: -moz-linear-gradient(top, #d934c3, #b82b6d);
+  background-image: -ms-linear-gradient(top, #d934c3, #b82b6d);
+  background-image: -o-linear-gradient(top, #d934c3, #b82b6d);
+  background-image: linear-gradient(to bottom, #d934c3, #b82b6d);
+}
+
+.check-mates-btn:hover {
+  background: #fa91e9;
+  background-image: -webkit-linear-gradient(top, #fa91e9, #f25493);
+  background-image: -moz-linear-gradient(top, #fa91e9, #f25493);
+  background-image: -ms-linear-gradient(top, #fa91e9, #f25493);
+  background-image: -o-linear-gradient(top, #fa91e9, #f25493);
+  background-image: linear-gradient(to bottom, #fa91e9, #f25493);
+  text-decoration: none;
+}
+.sign-up-btn {
+  background: #349ad9;
+  background-image: -webkit-linear-gradient(top, #349ad9, #896ae6);
+  background-image: -moz-linear-gradient(top, #349ad9, #896ae6);
+  background-image: -ms-linear-gradient(top, #349ad9, #896ae6);
+  background-image: -o-linear-gradient(top, #349ad9, #896ae6);
+  background-image: linear-gradient(to bottom, #349ad9, #896ae6);
+
+}
+
+.sign-up-btn:hover {
+  background: #91cefa;
+  background-image: -webkit-linear-gradient(top, #91cefa, #7c96eb);
+  background-image: -moz-linear-gradient(top, #91cefa, #7c96eb);
+  background-image: -ms-linear-gradient(top, #91cefa, #7c96eb);
+  background-image: -o-linear-gradient(top, #91cefa, #7c96eb);
+  background-image: linear-gradient(to bottom, #91cefa, #7c96eb);
+  text-decoration: none;
+}
