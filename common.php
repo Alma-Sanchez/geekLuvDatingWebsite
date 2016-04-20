@@ -1,4 +1,18 @@
 <?php
+    function getHead() {
+        return (
+        '<head>
+            <title>GeekLuv</title>
+
+            <meta charset="utf-8" />
+
+            <!-- instructor-provided CSS and JavaScript links; do not modify -->
+            <link href="heart.gif" type="image/gif" rel="shortcut icon" />
+            <link href="Geekluv.css" type="text/css" rel="stylesheet" />
+        </head>'
+        );
+    }
+
     function getHeader() {
         return (
             '<div id="bannerarea">
