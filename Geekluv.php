@@ -6,22 +6,16 @@
 	you are going to write, signup.php and matches.php.
 	You can modify this file as necessary to move redundant code out to common.php.
 	-->
-	
-	<head>
-		<title>GeekLuv</title>
-		
-		<meta charset="utf-8" />
-		
-		<!-- instructor-provided CSS and JavaScript links; do not modify -->
-		<link href="heart.gif" type="image/gif" rel="shortcut icon" />
-		<link href="Geekluv.css" type="text/css" rel="stylesheet" />
-	</head>
+    
+<!--    Import statements for PHP   -->
+    <?php
+        include "common.php";
+    ?>
+    
+    <?= getHead() ?>
 
 	<body>
-		<div id="bannerarea">
-			<img src="nerdxing.jpg" alt="banner logo" /> <br />
-			where meek geeks meet
-		</div>
+		<?= getHeader() ?>
 
 		<div class="welcomeButtons">
 			<h1>Welcome!</h1>
@@ -40,24 +34,7 @@
 				</li>
 			</ul>
 		</div>
-
-		<div>
-			<p>
-				This page is for single nerds to meet and date each other!  Type in your personal information and wait for the nerdly luv to begin!  Thank you for using our site.
-			</p>
-			
-			<p>
-				Results and page &copy; Copyright Geekluv Inc.
-			</p>
-			
-			<ul>
-				<li>
-					<a href="geekluv.php">
-						<img src="back.gif" alt="icon" />
-						Back to front page
-					</a>
-				</li>
-			</ul>
-		</div>
+        
+        <?= getFooter() ?>
 	</body>
 </html>
