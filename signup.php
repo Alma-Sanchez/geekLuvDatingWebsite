@@ -10,9 +10,8 @@
 	<head>
 		<title>GeekLuv</title>
 		
-		<meta charset="utf-8" />
+		<meta charset="utf-8"/>
 		
-		<!-- instructor-provided CSS and JavaScript links; do not modify -->
 		<link href="heart.gif" type="image/gif" rel="shortcut icon" />
 		<link href="Geekluv.css" type="text/css" rel="stylesheet" />
 	</head>
@@ -22,18 +21,44 @@
 			<img src="nerdxing.jpg" alt="banner logo" /> <br />
 			where meek geeks meet
 		</div>
-		<form>
+		<form action="signup">
+		<fieldset>
+			<legend>Sign up below:</legend>
 			Name: <input type="text" ></input><br>
 			Gender: <input type="radio" name="gender" value="female"></input>Female
 				<input type="radio" name="gender" value="male"></input>Male <br>
-				Age <select>
+				Age <select value="selectAge" >
 					<?php
-						for($i; $i<45;$i++){
-							echo "<option>$i</option>"
+						for($i=18; $i<=79;$i++){
+							echo "<option value='$i'>$i</option>";
 						}
 					?>
 				</select>
-			<br>
+				<input type="text" ></input> <a href="https://www.16personalities.com/free-personality-test">(Don't know your type?)</a><br>
+				Favorite OS: <select>
+					<option value="windows">Windows</option>
+					<option value="Linux">Linux</option>
+					<option value="Mac">Mac</option>
+				</select>
+				<br>
+				Seeking age: 
+				<select value="minAge">	
+					<?php
+						for($i=18; $i<=79;$i++){
+							echo "<option value='$i'>$i</option>";
+						}
+					?>
+				</select>
+				to
+				<select value="maxAge">	
+					<?php
+						for($i=18; $i<=79;$i++){
+							echo "<option value='$i'>$i</option>";
+						}
+					?>
+				</select><br><br>
+				<input type="submit" value="Sign Up!" class="check-mates-btn"></input>
+		</fieldset>
 		</form>
 	</body>
 </html>
