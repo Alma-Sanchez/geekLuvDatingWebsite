@@ -6,7 +6,6 @@
 
             <meta charset="utf-8" />
 
-            <!-- instructor-provided CSS and JavaScript links; do not modify -->
             <link href="heart.gif" type="image/gif" rel="shortcut icon" />
             <link href="Geekluv.css" type="text/css" rel="stylesheet" />
         </head>'
@@ -17,7 +16,7 @@
         return (
             '<div id="bannerarea">
                 <img src="nerdxing.jpg" alt="banner logo" /> <br />
-                where meek geeks meet
+                <h1>Where Meek Geeks Meet</h1>
             </div>'
         );
     }
