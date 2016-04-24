@@ -20,11 +20,12 @@
 		<?php
 	        include "common.php";
 	    ?>
-		<?= getHeader() ?>
+		<?= getHeader(); ?>
 
 		<form action="signup-submit.php" method="POST" enctype="multipart/form-data">
 			<fieldset>
 				<legend>Sign up below:</legend>
+				<span class="error"><?php echo $error ?></span>
 				Name: <input type="text" name="name"></input><br>
 				
 				Gender: 
@@ -68,8 +69,8 @@
 						?>
 					</select><br>
 				Interested in: 
-					<input type="checkbox" name="seekingMaleGender"></input>Male
-					<input type="checkbox" name="seekingFemaleGender"></input>Female
+					<input type="checkbox" name="seekingGender" value="male"></input>Male
+					<input type="checkbox" name="seekingGender" value="female"></input>Female
 					<br>
 				Upload Profile Picture <input type="file" name="profilePic"></input><br>
 

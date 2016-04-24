@@ -5,6 +5,10 @@
     <body>
         <?= getHeader() ?>
 		<?php
+			$name = $gender = $age = $type = $os = $minAge = $maxAge = $seekingGender ="";
+			$error = ""; 
+		?>
+		<?php
         	/*====================
 				Patterns to check for
 			=====================*/
@@ -14,48 +18,48 @@
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				// check name
 				if(empty($_POST["name"]) || !preg_match($namePattern, $_POST["name"])){
-					$nameError = "Please correctly type your name";
+					$error += "Please enter or correctly type your name. <br>";
 				}	else{
 					$name = $_POST["name"];
-					$nameError = "";
 				}	
 				// check gender
 				if(empty($_POST["gender"])){
-					$genderError ="Please select a gender";
+					$error += "Please select a gender. <br>";
 				}else{
 					$gender = $_POST["gender"];
-					$genderError = "";
 				}
 
-					//check to make sure type is filled out
+				//check to make sure type is filled out
 				if(empty($_POST["type"]) || !preg_match($typePattern, $_POST["type"])){
-					$typeError = "Please enter a type.";
+					$error += "Please enter a type. <br>";
 				}else{
-					$type = "type number " . $_POST["type"];
+					$type = $_POST["type"];
+				}
+
+				if(empty($_POST["seekingGender"])){
+					$error += "Please select a gender you'd like to date";
+				}else{
+					$seekingGender = $_POST["seekingGender"];
 				}
 
 				// Don't need to check os, age or seeking age since there's a default selected default
+				$age = $_POST["age"];
+				$os = $_POST["os"];
+				$minAge = $_POST["minAge"];
+				$maxAge = $_POST["maxAge"];
+
 			}
+			echo $error;
 		?>
 
-		<?php
-			$name = $gender = $age = $type = $os = $minAge = $maxAge = "";
-			$name = $_POST["name"];
-			$gender = $_POST["gender"];
-			$age = $_POST["age"];
-			$type = $_POST["type"];
-			$os = $_POST["os"];
-			$minAge = $_POST["minAge"];
-			$maxAge = $_POST["maxAge"];
-		?>
 		<p>
 			<?php echo "Welcome to GeekLuv $name! <br> Now you can <a href='matches.php'>login </a> to find your perfect match!"; 
 			?>	
 		</p>
 		<!-- Write sign up stuff to singles2.txt-->
 		<?php
-			$outputFile = fopen("singles2.txt","") or die("Unable to open file!");
-			$textToAdd = "$name,$\n";
+			// $outputFile = fopen("singles2.txt","") or die("Unable to open file!");
+			// $textToAdd = "$name,$\n";
 		?>
 
 		<!-- =====================================
