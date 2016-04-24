@@ -22,27 +22,36 @@
 	    ?>
 		<?= getHeader() ?>
 
-		<form action="signup">
+		<form action="signup-submit.php" method="POST" enctype="multipart/form-data">
 			<fieldset>
 				<legend>Sign up below:</legend>
-				Name: <input type="text" ></input><br>
-				Gender: <input type="radio" name="gender" value="female"></input>Female
-					<input type="radio" name="gender" value="male"></input>Male <br>
-					Age <select value="selectAge" >
+				Name: <input type="text" name="name"></input><br>
+				
+				Gender: 
+					<input type="radio" name="gender" value="female"></input>Female
+					<input type="radio" name="gender" value="male"></input>Male
+					<input type="radio" name="gender" value="male"></input>MF <br>
+
+				Age 
+					<select value="selectAge" name="age">
 						<?php
 							for($i=18; $i<=79;$i++){
 								echo "<option value='$i'>$i</option>";
 							}
 						?>
 					</select>
-					<input type="text" ></input> <a href="https://www.16personalities.com/free-personality-test">(Don't know your type?)</a><br>
-					Favorite OS: <select>
-						<option value="windows">Windows</option>
-						<option value="Linux">Linux</option>
-						<option value="Mac">Mac</option>
+					<br>
+				Type:
+					<input type="text" name="type"></input> <a href="https://www.16personalities.com/free-personality-test">(Don't know your type?)</a><br>
+
+				Favorite OS: 
+					<select name="os">
+						<option value="windows" name="os">Windows</option>
+						<option value="Linux" name="os">Linux</option>
+						<option value="Mac" name="os">Mac</option>
 					</select>
 					<br>
-					Seeking age: 
+				Seeking age: 
 					<select value="minAge">	
 						<?php
 							for($i=18; $i<=79;$i++){
@@ -50,17 +59,25 @@
 							}
 						?>
 					</select>
-					to
+				to
 					<select value="maxAge">	
 						<?php
 							for($i=18; $i<=79;$i++){
 								echo "<option value='$i'>$i</option>";
 							}
 						?>
-					</select><br><br>
-					<input type="submit" value="Sign Up!" class="check-mates-btn"></input>
+					</select><br>
+				Interested in: 
+					<input type="checkbox" name="seekingMaleGender"></input>Male
+					<input type="checkbox" name="seekingFemaleGender"></input>Female
+					<br>
+				Upload Profile Picture <input type="file" name="profilePic"></input><br>
+
+				<!-- Submit! -->
+				<input type="submit" value="Sign Up!" class="check-mates-btn"></input>
 			</fieldset>
 		</form>
+		<!-- Use function for repetative footer -->
 		<?= getFooter() ?>
 	</body>
 </html>

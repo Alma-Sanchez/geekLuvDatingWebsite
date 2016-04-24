@@ -24,7 +24,10 @@ a img {
 }
 
 #bannerarea {
+	margin: 0 auto;
+	width: 250px;
 	margin-bottom: 2em;
+	text-align: center;
 }
 
 body {
@@ -56,9 +59,14 @@ input[type="submit"] {
 	Sign up sheet
 	might need to make this specific
 ==================*/
-input{
-	border: 2px ridge #ff3399;
+form{
+	width: 500px;
+	margin: 0 auto;
+}
+input, select{
+	border: 2px ridge #ffb3d9;
 	font-size: 9pt;
+	margin: 5px;
 }
 legend {
 	background-color: #ffb3d9;
@@ -68,8 +76,9 @@ legend {
 	padding: 0.2em;
 }
 fieldset {
+	padding: 20px;
 	background-color: #fff;
-	border: 2px outset #ff3399;
+	border: 2px solid #ff3399;
 	border-radius: 10px;
 }
 .match {
@@ -91,7 +100,7 @@ fieldset {
 
 ul{
 	list-style-type: none;
-	padding-left: 0em;
+	padding-left: 0;
 }
 li a img {
 	vertical-align: middle;
@@ -112,13 +121,13 @@ li a img {
 }
 .check-mates-btn {
   background: #d934c3;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d934c3), color-stop(100%,#b82b6d)); /* Chrome,Safari4+ */
   background-image: -webkit-linear-gradient(top, #d934c3, #b82b6d);
   background-image: -moz-linear-gradient(top, #d934c3, #b82b6d);
   background-image: -ms-linear-gradient(top, #d934c3, #b82b6d);
   background-image: -o-linear-gradient(top, #d934c3, #b82b6d);
   background-image: linear-gradient(to bottom, #d934c3, #b82b6d);
 }
-
 .check-mates-btn:hover {
   background: #fa91e9;
   background-image: -webkit-linear-gradient(top, #fa91e9, #f25493);
@@ -130,6 +139,7 @@ li a img {
 }
 .sign-up-btn {
   background: #349ad9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#349ad9), color-stop(100%,#896ae6)); /* Chrome,Safari4+ */
   background-image: -webkit-linear-gradient(top, #349ad9, #896ae6);
   background-image: -moz-linear-gradient(top, #349ad9, #896ae6);
   background-image: -ms-linear-gradient(top, #349ad9, #896ae6);
@@ -137,7 +147,6 @@ li a img {
   background-image: linear-gradient(to bottom, #349ad9, #896ae6);
 
 }
-
 .sign-up-btn:hover {
   background: #91cefa;
   background-image: -webkit-linear-gradient(top, #91cefa, #7c96eb);
