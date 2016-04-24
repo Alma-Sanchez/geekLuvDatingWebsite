@@ -114,17 +114,17 @@
         $profile = new Profile($line);
         array_push($profiles, $profile);
     }
+    fclose($singlesHandler);
 
     
     function getUserProfile($pName) {
         global $profiles;
         foreach ($profiles as $profile) {
-//            echo $profile->getFullName();
             if ($profile->getFullName() == $pName) {
                 return $profile;
             }
         }
-        return false;sd
+        return false;
     }
 
 
