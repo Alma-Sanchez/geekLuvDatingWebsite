@@ -18,7 +18,7 @@
 		<?= getHeader() ?>
 
 		<div class="welcomeButtons">
-			<h1>Welcome!</h1>
+			<h2>Welcome!</h2>
 			<ul>
 				<li>
 					<a href="signup.php" class="sign-up-btn">

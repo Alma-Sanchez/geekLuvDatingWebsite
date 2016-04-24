@@ -4,12 +4,6 @@ You should link to this provided stylesheet from all of your pages.
 You should not need to modify this file. 
 Your pages should work with it as-is.
 */
-
-* {
-	font-size: 12pt;
-	font-family: "Verdana", "Geneva", sans-serif;
-}
-
 a {
 	color: #F44;
 	text-decoration: none;
@@ -33,8 +27,17 @@ a img {
 body {
 	background-color: white;
 	padding-left: 1em;
+	font-size: 12pt;
+	font-family: "Verdana", "Geneva", sans-serif;
 }
-
+.error{
+	color: red;	
+}
+.welcomeButtons{
+	width: 300px;
+	text-align: center;
+	margin: 0 auto;
+}
 body > div, form {
 	overflow: hidden;
 	width: 35em;
