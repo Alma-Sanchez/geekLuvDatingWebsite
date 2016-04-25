@@ -8,7 +8,8 @@
 		<?= getHeader(); ?>
 		<?php 
 			// include 'signup-submit.php';
-			$name = $gender = $age = $type = $os = $minimumAge = " ";
+			$name = $gender = $age = $type = $os = " ";
+			$minimumAge = "18";
 			$maxAge = $seekingGender = $error = " ";
 			/*Patterns to check for */
 			$namePattern = '(([A-Z][a-z]+\s[A-Z]([\']?)([a-z]?)([A-Z]?)[a-z]+))';

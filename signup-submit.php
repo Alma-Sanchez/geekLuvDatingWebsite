@@ -19,7 +19,7 @@
 
 		
 
-			print_r("<div class='center'>Welcome to GeekLuv $name!:D <br> Now you can <a href='matches.php'>login</a> to find your perfect match!</div>"); 
+			print_r("<div class='center'>Welcome to GeekLuv $name! <br> Now you can <a href='matches.php'>login</a> to find your perfect match!</div>"); 
 
 			//Unset the useless session variable
 			unset($_SESSION['POST']);
