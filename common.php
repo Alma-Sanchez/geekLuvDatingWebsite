@@ -48,16 +48,23 @@
         $age = $profile->getAge();
         $personality = $profile->getPersonalityType();
         $OS = $profile->getFavoriteSystem();
-        echo
-            "<div>
+        $sex = $profile->getSex();
+        if($sex == "F"){
+            $imageSrc = "user.png";
+        }else{
+            $imageSrc = "userm.png";
+        }
+        print_r(
+            "<div class='match center'>
+                <p> $name </p>
+                <image src=$imageSrc alt='user profile picture'>
                 <ul>
-                    <li> $name </li>
                     <li> $age </li>
                     <li> $personality </li>
                     <li> $OS </li>
                 </ul>
             </div>
-            ";
+            ");
     }
 
 

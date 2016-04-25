@@ -15,19 +15,19 @@
     $userProfile = getUserProfile($name);
     
     if ($userProfile === false) {
-        echo "You cannot be found in the database. <br>";
-        echo "Return to the front page and sign up, or check the spelling.";
+        print_r("You cannot be found in the database. <br>");
+        print_r("Return to the front page and sign up, or check the spelling.");
     } else {
         $matches = getMatches($userProfile);
-        if (count($matches) > 0) {
-            // Render matches.
-            echo "Good news, you have " . count($matches) . " matches.";
-            for ($i = 0; $i < count($matches); $i++) {
-                echo displayProfile($matches[$i]);
+            if (count($matches) > 0) {
+                // Render matches.
+                print_r("<div class='center'>Good news, you have " . count($matches) . " matches.</div>");
+                for ($i = 0; $i < count($matches); $i++) {
+                    print_r(displayProfile($matches[$i]));
+                }
+            } else {
+                print_r("<div class='center'> No matches meet your criteria.</div>");
             }
-        } else {
-            echo "No matches meet your criteria.";
-        }
     }
 ?>
         
