@@ -17,9 +17,9 @@
     
     if (count($matches) > 0) {
         // Render matches.
-        echo "Good news, you have " . count($matches) . " matches.";
+        print_r("Good news, you have " . count($matches) . " matches.");
     } else {
-        echo "No matches meet your criteria.";
+        print_r("No matches meet your criteria.");
     }
     
     
