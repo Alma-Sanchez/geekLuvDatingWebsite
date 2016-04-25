@@ -13,6 +13,7 @@
 		$gender = $_SESSION['gender'];
 		$age = $_SESSION['age'];
 		$type = $_SESSION['type'];
+		$os = $_SESSION['os'];
 		$minimumAge = $_SESSION['minimumAge'];
 		$maxAge = $_SESSION['maxAge'];
 		$seekingGender = $_SESSION['seekingGender'];
@@ -24,15 +25,15 @@
 			//Unset the useless session variable
 			unset($_SESSION['POST']);
 			
-			addProfile($name,$gender,$age,$type,$minimumAge,$maxAge,$seekingGender);
+			addProfile($name,$gender,$age,$type,$os,$minimumAge,$maxAge,$seekingGender);
 			?>	
 		</p>
 		<?php
 			// Write sign up stuff to singles2.txt
-			function addProfile($name,$gender,$age,$type,$minimumAge,$maxAge,$seekingGender){
+			function addProfile($name,$gender,$age,$type,$os,$minimumAge,$maxAge,$seekingGender){
 				$outputFile = fopen("singles2.txt","a") or die("Unable to open file!");
 				echo fread($outputFile, filesize("singles2.txt"));
-				$textToAdd = "$name,$gender,$age,$type,$minimumAge,$maxAge,$seekingGender\n";
+				$textToAdd = "$name,$gender,$age,$type,$os,$minimumAge,$maxAge,$seekingGender\n";
 				fwrite($outputFile,$textToAdd);
 				fclose($outputFile);
 			}

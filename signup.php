@@ -51,6 +51,9 @@
 						$filledOut++;
 						$type = $_POST['type'];
 					}
+					if(isset($os)){
+						$os = $_POST['os'];
+					}
 
 					// Check for seeking gender
 					if(empty($_POST["seekingGender"])){
@@ -91,6 +94,7 @@
 						$_SESSION['gender'] = $gender;
 						$_SESSION['age'] = $age;
 						$_SESSION['type'] = $type;	
+						$_SESSION['os'] = $os;
 						$_SESSION['minimumAge'] = $minimumAge;
 						$_SESSION['maxAge'] = $maxAge;
 						$_SESSION['seekingGender'] = $seekingGender;
