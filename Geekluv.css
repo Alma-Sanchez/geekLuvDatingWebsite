@@ -16,7 +16,10 @@ a:hover {
 a img {
 	border: none;
 }
-
+.center{
+	width: 400px;
+	margin: 0 auto;
+}
 #bannerarea {
 	margin: 0 auto;
 	width: 250px;

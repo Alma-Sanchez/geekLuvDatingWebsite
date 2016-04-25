@@ -8,7 +8,8 @@
 		<?= getHeader(); ?>
 		<?php 
 			// include 'signup-submit.php';
-			$name = $gender = $age = $type = $os = $minAge = $maxAge = $seekingGender = $error = " ";
+			$name = $gender = $age = $type = $os = $minimumAge = " ";
+			$maxAge = $seekingGender = $error = " ";
 			/*Patterns to check for */
 			$namePattern = '(([A-Z][a-z]+\s[A-Z]([\']?)([a-z]?)([A-Z]?)[a-z]+))';
 			$typePattern = '([A-Z]{4})';
@@ -20,7 +21,7 @@
 						$error .= "Please enter or correctly type your name. <br>";
 					}	else{
 						$filledOut++;
-						$_POST['name'];
+						$name = $_POST['name'];
 					}	
 					// check gender
 					if(empty($_POST["gender"])){
@@ -38,7 +39,7 @@
 
 					// Check to make sure we have an age
 					if(isset($_POST['age'])){
-						$_POST['age'];
+						$age = $_POST['age'];
 						$filledOut++;	
 					}else{
 						$error .= "Please tell us your age";
@@ -48,7 +49,7 @@
 						$error .= "Please enter a type. <br>";
 					}else{
 						$filledOut++;
-						$_POST['type'];
+						$type = $_POST['type'];
 					}
 					// Check for seeking gender
 					if(empty($_POST["seekingGender"])){
@@ -64,24 +65,30 @@
 						$filledOut++;
 					}
 					// Check for min seeking age
-					if(isset($_POST['minAge'])){
+					if(isset($_POST['maxAge'])){
 						$filledOut++;
-						$_POST['minAge'];
+						$maxAge = $_POST['maxAge'];
 					}else{
 						$error .= "Please selct a min age";
 					}
-
+					// Check for max seeking age
+					if(isset($_POST['minimumAge'])){
+						$filledOut++;
+						$minimumAge = $_POST['minimumAge'];
+					}else{
+						$error .= "Please selct a min age";
+					}
 					if(5 <= $filledOut ){
 						//Start the session
 						session_start();
 
 						//Save post variables in current session in order for other file to be able to access them 
-						$_SESSION['name'] = $_POST['name'];
+						$_SESSION['name'] = $name;
 						$_SESSION['gender'] = $gender;
-						$_SESSION['age'] = $_POST['age'];
-						$_SESSION['type'] = $_POST['type'];	
-						$_SESSION['minAge'] = $_POST['minAge'];
-						$_SESSION['maxAge'] = $_POST['maxAge'];
+						$_SESSION['age'] = $age;
+						$_SESSION['type'] = $type;	
+						$_SESSION['minimumAge'] = $minimumAge;
+						$_SESSION['maxAge'] = $maxAge;
 						$_SESSION['seekingGender'] = $seekingGender;
 
 						// Call other PHP file if validation passes
@@ -125,10 +132,10 @@
 					</select>
 					<br>
 				Seeking age: 
-					<select name="minAge" value="minAge">	
+					<select name="minimumAge" value="minimumAge">	
 						<?php
 							for($i=18; $i<=79;$i++){
-								print_r("<option name='minAge' value='$i'>$i</option>");
+								print_r("<option name='minimumAge' value='$i'>$i</option>");
 							}
 						?>
 					</select>
