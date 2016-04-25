@@ -43,6 +43,23 @@
         );
     }
 
+    function displayProfile($profile) {
+        $name = $profile->getFullName();
+        $age = $profile->getAge();
+        $personality = $profile->getPersonalityType();
+        $OS = $profile->getFavoriteSystem();
+        echo
+            "<div>
+                <ul>
+                    <li> $name </li>
+                    <li> $age </li>
+                    <li> $personality </li>
+                    <li> $OS </li>
+                </ul>
+            </div>
+            ";
+    }
+
 
     class Profile {
         public $info;
