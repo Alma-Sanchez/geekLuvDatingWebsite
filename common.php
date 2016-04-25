@@ -49,9 +49,10 @@
         $personality = $profile->getPersonalityType();
         $OS = $profile->getFavoriteSystem();
         $sex = $profile->getSex();
-        if($sex == "F"){
+        
+        if ($sex == "F"){
             $imageSrc = "user.png";
-        }else{
+        } else {
             $imageSrc = "userm.png";
         }
         print_r(
@@ -59,9 +60,9 @@
                 <p> $name </p>
                 <image src=$imageSrc alt='user profile picture'>
                 <ul>
-                    <li> $age </li>
-                    <li> $personality </li>
-                    <li> $OS </li>
+                    <li> Age: $age </li>
+                    <li> Personality Type: $personality </li>
+                    <li> Favorite OS:  $OS </li>
                 </ul>
             </div>
             ");
