@@ -24,6 +24,7 @@
 						$filledOut++;
 						$name = $_POST['name'];
 					}	
+
 					// check gender
 					if(empty($_POST["gender"])){
 						$error .= "Please select a gender you'd like to date <br>";
@@ -32,9 +33,6 @@
 						$filledOut++;
 					}else if($_POST["gender"] == "F"){
 						$gender = "F";
-						$filledOut++;
-					}else{
-						$gender = "MF";
 						$filledOut++;
 					}
 
@@ -45,6 +43,7 @@
 					}else{
 						$error .= "Please tell us your age";
 					}
+
 					//check to make sure type is filled out
 					if(empty($_POST["type"]) || !preg_match($typePattern, $_POST["type"])){
 						$error .= "Please enter a type. <br>";
@@ -52,6 +51,7 @@
 						$filledOut++;
 						$type = $_POST['type'];
 					}
+
 					// Check for seeking gender
 					if(empty($_POST["seekingGender"])){
 						$error .= "Please select a gender you'd like to date <br>";
@@ -65,6 +65,7 @@
 						$seekingGender = "MF";
 						$filledOut++;
 					}
+
 					// Check for min seeking age
 					if(isset($_POST['maxAge'])){
 						$filledOut++;
@@ -72,6 +73,7 @@
 					}else{
 						$error .= "Please selct a min age";
 					}
+
 					// Check for max seeking age
 					if(isset($_POST['minimumAge'])){
 						$filledOut++;
@@ -79,7 +81,8 @@
 					}else{
 						$error .= "Please selct a min age";
 					}
-					if(5 <= $filledOut ){
+
+					if(6 <= $filledOut ){
 						//Start the session
 						session_start();
 
@@ -109,10 +112,9 @@
 				Name: <input type="text" name="name"></input><br>
 				
 				Gender: 
-					<input type="radio" name="gender" value="female"></input>Female
-					<input type="radio" name="gender" value="male"></input>Male
-					<input type="radio" name="gender" value="male"></input>MF <br>
-
+					<input type="radio" name="gender" value="F"></input>Female
+					<input type="radio" name="gender" value="M"></input>Male
+					<br>
 				Age 
 					<select value="selectAge" name="age">
 						<?php
