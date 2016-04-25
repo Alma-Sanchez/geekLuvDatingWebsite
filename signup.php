@@ -20,7 +20,7 @@
 						$error .= "Please enter or correctly type your name. <br>";
 					}	else{
 						$filledOut++;
-						$_POST['name'];
+						$name = $_POST['name'];
 					}	
 					// check gender
 					if(empty($_POST["gender"])){
@@ -38,7 +38,7 @@
 
 					// Check to make sure we have an age
 					if(isset($_POST['age'])){
-						$_POST['age'];
+						$age = $_POST['age'];
 						$filledOut++;	
 					}else{
 						$error .= "Please tell us your age";
@@ -48,7 +48,7 @@
 						$error .= "Please enter a type. <br>";
 					}else{
 						$filledOut++;
-						$_POST['type'];
+						$type = $_POST['type'];
 					}
 					// Check for seeking gender
 					if(empty($_POST["seekingGender"])){
@@ -66,7 +66,7 @@
 					// Check for min seeking age
 					if(isset($_POST['minAge'])){
 						$filledOut++;
-						$_POST['minAge'];
+						$minAge = $_POST['minAge'];
 					}else{
 						$error .= "Please selct a min age";
 					}
@@ -76,12 +76,12 @@
 						session_start();
 
 						//Save post variables in current session in order for other file to be able to access them 
-						$_SESSION['name'] = $_POST['name'];
+						$_SESSION['name'] = $name;
 						$_SESSION['gender'] = $gender;
-						$_SESSION['age'] = $_POST['age'];
-						$_SESSION['type'] = $_POST['type'];	
-						$_SESSION['minAge'] = $_POST['minAge'];
-						$_SESSION['maxAge'] = $_POST['maxAge'];
+						$_SESSION['age'] = $age;
+						$_SESSION['type'] = $type;	
+						$_SESSION['minAge'] = $minAge;
+						$_SESSION['maxAge'] = $maxAge;
 						$_SESSION['seekingGender'] = $seekingGender;
 
 						// Call other PHP file if validation passes
