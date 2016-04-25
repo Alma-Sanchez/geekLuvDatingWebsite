@@ -13,17 +13,22 @@
     $name = $_POST["fullName"];
     $names = explode(" ", $name);
     $userProfile = getUserProfile($name);
-    $matches = getMatches($userProfile);
     
-    if (count($matches) > 0) {
-        // Render matches.
-        echo "Good news, you have " . count($matches) . " matches.";
+    if ($userProfile === false) {
+        echo "You cannot be found in the database. <br>";
+        echo "Return to the front page and sign up, or check the spelling.";
     } else {
-        echo "No matches meet your criteria.";
+        $matches = getMatches($userProfile);
+        if (count($matches) > 0) {
+            // Render matches.
+            echo "Good news, you have " . count($matches) . " matches.";
+            for ($i = 0; $i < count($matches); $i++) {
+                echo displayProfile($matches[$i]);
+            }
+        } else {
+            echo "No matches meet your criteria.";
+        }
     }
-    
-    
-//    $singlesContents = fread($singlesHandler, 1000000);
 ?>
         
     <?= getFooter() ?>
